@@ -9,7 +9,7 @@
 <meta name="author" content="Joseph Maier">
 <meta name="dcterms.date" content="2022-04-16">
 
-<title>Joseph Maier’s Blog - Are first round running backs worth the price?</title>
+<title>Joseph Maier’s Blog - Are first-round running backs worth the price?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -179,7 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Are first round running backs worth the price?</h1>
+<h1 class="title">Are first-round running backs worth the price?</h1>
   <div class="quarto-categories">
     <div class="quarto-category">nfl</div>
     <div class="quarto-category">runningbacks</div>
@@ -211,11 +211,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>With the NFL draft just weeks away, it’s officially mock draft season. It’s also that time of year where both fans and so-called draft experts debate the respective value of each position.</p>
-<p>Over the last several years, first round running backs in particular have been the object of much discussion. Is drafting a running back in the first round worth it? The answer has largely been no. But just how true is that assumption? Is it based measurable statistics?</p>
+<p>With the NFL draft just weeks away, it’s officially mock draft season. It’s also that time of year when both fans and so-called draft experts debate the respective value of each position.</p>
+<p>Over the last several years, first-round running backs in particular have been the object of much discussion. Is drafting a running back in the first round worth it? The answer has largely been no. But just how true is that assumption? Is it based on measurable statistics?</p>
 <p>Let’s dive into some data to see for ourselves.</p>
-<p>First off, when talking about first round running backs, we’ll only focus on players playing on the team that originally drafted them. Once players go elsewhere, the organization that drafted them no longer reaps the benefits of using a pick on them.</p>
-<p>Why do NFL teams care about drafting good player? Winning games of course. So does drafting a running back in the first round directly correlate to victories? Not so much.</p>
+<p>First off, when talking about first-round running backs, we’ll only focus on players playing on the team that originally drafted them. Once players go elsewhere, their original team no longer reaps the benefits of using a pick on them.</p>
+<p>Why do NFL teams care about drafting good players? Winning games of course. So does drafting a running back in the first round directly correlate to victories? Not so much.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -229,13 +229,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>draft, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Team, W), <span class="at">weight=</span>W, <span class="at">fill=</span>FirstRoundRB)) <span class="sc">+</span> </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"grey"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"grey"</span>, <span class="st">"#0047AB"</span>)) <span class="sc">+</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Team"</span>, </span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Total Wins Since 2002"</span>, </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First round running backs rarely contribute to winning teams"</span>, </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Since 2002, only six NFL teams have had a first round running back they drafted on their roster in over </span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">half of their total wins."</span>, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First-round running backs rarely contribute to winning teams"</span>, </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Since 2002, only six NFL teams have had a first-round running back that they drafted on their roster in over </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">half their total wins."</span>, </span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Joseph Maier"</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
@@ -248,8 +248,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>If you want to win games, running back may not be the way to go in the first round. Notice how most of the good teams over the last 20 years didn’t roster a first round running back often.</p>
-<p>So what other position should we prioritize? Quarterback is obvious, but we don’t want to be drafting one of those every year. Let’s see how offensive tackles stack up compared to running backs in the winning department.</p>
+<p>If you want to win games, running back may not be the way to go in the first round. Notice how most of the best teams over the last 20 years rarely rostered a first-round running back.</p>
+<p>So what other position should we prioritize instead? Quarterback is obvious, but we don’t want to be drafting one of those every year. Let’s see how first-round offensive tackles stack up in the winning department.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -260,8 +260,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Team"</span>, </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Total Wins Since 2002"</span>, </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First round offensive tackles help their teams much more"</span>, </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"A much larger portion of the NFL's total wins came with a first round tackle on the roster since 2002"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First-round offensive tackles help their teams much more"</span>, </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"A much larger portion of the NFL's total wins came with a first-round tackle on the roster since 2002"</span>, </span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Joseph Maier"</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
@@ -274,8 +274,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>First round big men up front play for winning teams much more often. But it is a team sport, and one position can’t directly decide the outcome of games. The more a player plays, though, the more they can help their team win.</p>
-<p>So how often are first round running backs starters on their team? Surprisingly, more as of late.</p>
+<p>First-round big men play for winning teams much more often. But it’s a team sport, and one position can’t directly decide the outcome of games. The more a player plays, though, the more they can benefit their team.</p>
+<p>So how often are first-round running backs starters on their teams? Surprisingly, more often as of late.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -328,7 +328,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The younger running backs have been consistent starters, but it’s probably too early to judge their full careers yet. If the retired players tell us anything, we can expect first round running backs to start an average around 50% of their total seasons. So how do offensive tackles compare?</p>
+<p>The younger running backs have been consistent starters, but it’s probably too early to judge their full careers yet. If the retired players tell us anything, we can expect first-round running backs to start around 50% of their total seasons on average. Let’s compare that to offensive tackles.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -359,8 +359,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The predictive model is trending down, but the data is much more consistent. Look how much higher the retired tackles cluster is here than the previous tackle. If you want a player that is going to be a starter in most of his seasons, offensive tackle is the way to go.</p>
-<p>But that doesn’t give us the whole story. What if someone played just one season, but was a starter during it. That wouldn’t justify the first round selection.</p>
+<p>The predictive model is trending down, but the data is much more consistent. Look how much higher the retired tackles cluster is here than in the previous chart. If you want a player who will be a starter in most of his total seasons, tackle is the way to go.</p>
+<p>But that doesn’t give us the whole story. What if someone played just one season, but was a starter during it? That wouldn’t justify a first-round selection.</p>
 <p>So let’s strip this data down solely for total seasons being a starter.</p>
 <div class="cell">
 <details>
@@ -376,9 +376,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Draft Year"</span>, </span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Seasons being a Starter"</span>, </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Drafting a first round offensive tackle is the safer bet"</span>, </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Among players drafted between 2002-2015, only five first round running backs </span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">started more seasons than the average for first round offensive tackles"</span>, </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Drafting a first-round offensive tackle is the safer bet"</span>, </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Among players drafted between 2002-2015, only five first-round running backs </span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">started more seasons than the average for first-round offensive tackles"</span>, </span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | Joseph Maier"</span></span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
@@ -391,6 +391,80 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>Tackles are starters for more seasons on average, nearly a 2 1/2 season advantage over first-round running backs.</p>
+<p>Enough about tackles, though, we’re focused on running backs. We need running backs on our roster, so what round should we draft them in?</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggalt)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggbeeswarm)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>draft <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"nfldraftrbtckl.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Season<span class="sc">&gt;</span><span class="dv">2001</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>runningbacks <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"draft.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">YearsPlayed =</span> (To<span class="sc">-</span>From <span class="sc">+</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(YearsPlayed<span class="sc">&gt;</span><span class="dv">0</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>beeswarmrb <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> <span class="fu">filter</span>(St<span class="sc">&gt;</span><span class="dv">0</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>avg1RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd1avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>avg2RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd2avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>avg3RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd3avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>avg4RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd4avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>avg5RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd5avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>avg6RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd6avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>avg7RB <span class="ot">&lt;-</span> runningbacks <span class="sc">%&gt;%</span> </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Rnd <span class="sc">==</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rnd7avg =</span> <span class="fu">mean</span>(YearsPlayed)) </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_beeswarm</span>(<span class="at">data=</span>beeswarmrb, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>YearsPlayed), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>avg1RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd1avg), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg2RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd2avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg3RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd3avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg4RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd4avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg5RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd5avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg6RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd6avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span>avg7RB, <span class="fu">aes</span>(<span class="at">x=</span>Rnd, <span class="at">y=</span>Rnd7avg ), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a> <span class="fu">labs</span>(</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Draft Round"</span>, </span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Years Played"</span>, </span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"First round running backs don't last much longer"</span>, </span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Since 2002, there's less than a four year difference in average career length between first round</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a><span class="st">running backs and seventh round running backs"</span>, </span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">""</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>To be fair, there’s a noticeable drop off in average career length from round one to round two. On average, a running back will play .5 fewer years per round after the first he’s drafted in.</p>
+<p>Does that justify drafting a running back in the first round? That’s up to you. But it’s certainly not as bad of a decision as many have made it seem.</p>
 
 
 
