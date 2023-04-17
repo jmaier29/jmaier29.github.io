@@ -211,10 +211,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>With the nfl draft just weeks away, it’s officially mock draft season. There seems to be a cliche over the last few years that you shouldn’t draft a running back in the first round. But just how true is that assumption. Are first round running backs worth it?</p>
-<p>Let’s dive into some data to see.</p>
+<p>With the NFL draft just weeks away, it’s officially mock draft season. It’s also that time of year where both fans and so-called draft experts debate the respective value of each position.</p>
+<p>Over the last several years, first round running backs in particular have been the object of much discussion. Is drafting a running back in the first round worth it? The answer has largely been no. But just how true is that assumption? Is it based measurable statistics?</p>
+<p>Let’s dive into some data to see for ourselves.</p>
 <p>First off, when talking about first round running backs, we’ll only focus on players playing on the team that originally drafted them. Once players go elsewhere, the organization that drafted them no longer reaps the benefits of using a pick on them.</p>
-<p>The goal of every NFL teams is to win games. So does drafting a running back in the first round directly correlate to victories? Not so much.</p>
+<p>Why do NFL teams care about drafting good player? Winning games of course. So does drafting a running back in the first round directly correlate to victories? Not so much.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -231,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"grey"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Team"</span>, </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Wins"</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Total Wins Since 2002"</span>, </span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First round running backs rarely contribute to winning teams"</span>, </span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Since 2002, only six NFL teams have had a first round running back they drafted on their roster in over </span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">half of their total wins."</span>, </span>
@@ -258,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"grey"</span>, <span class="st">"darkgreen"</span>)) <span class="sc">+</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Team"</span>, </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Wins"</span>, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Total Wins Since 2002"</span>, </span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"First round offensive tackles help their teams much more"</span>, </span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"A much larger portion of the NFL's total wins came with a first round tackle on the roster since 2002"</span>, </span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Joseph Maier"</span></span>
@@ -358,7 +359,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The predictive model is trending down, but the data is much more consistent. Look how much higher the retired tackles cluster is here than the previous tackle. If you want a player that is going to start most of his games, offensive tackle is the way to go.</p>
+<p>The predictive model is trending down, but the data is much more consistent. Look how much higher the retired tackles cluster is here than the previous tackle. If you want a player that is going to be a starter in most of his seasons, offensive tackle is the way to go.</p>
+<p>But that doesn’t give us the whole story. What if someone played just one season, but was a starter during it. That wouldn’t justify the first round selection.</p>
+<p>So let’s strip this data down solely for total seasons being a starter.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span> RBStPerYrOld, <span class="fu">aes</span>(<span class="at">x=</span> Year, <span class="at">y=</span> St, <span class="at">color=</span> <span class="st">"Running Backs"</span>)) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">data=</span> TStPerYrOld, <span class="fu">aes</span>(<span class="at">x=</span> Year, <span class="at">y=</span> St, <span class="at">color =</span> <span class="st">"Offensive Tackles"</span>)) <span class="sc">+</span>  </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="fl">6.930233</span>, <span class="at">color=</span><span class="st">"#50C878"</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="fl">4.517241</span>      , <span class="at">color=</span><span class="st">"#0047AB"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_color_manual</span>(<span class="at">name=</span><span class="st">"Position"</span>, <span class="at">values=</span><span class="fu">c</span>(<span class="st">"#50C878"</span>, <span class="st">"#0047AB"</span>)) <span class="sc">+</span>  </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">2002</span>, <span class="dv">2015</span>)) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Draft Year"</span>, </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Seasons being a Starter"</span>, </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Drafting a first round offensive tackle is the safer bet"</span>, </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Among players drafted between 2002-2015, only five first round running backs </span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">started more seasons than the average for first round offensive tackles"</span>, </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | Joseph Maier"</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 
