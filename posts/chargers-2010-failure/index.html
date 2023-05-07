@@ -9,7 +9,7 @@
 <meta name="author" content="Joseph Maier">
 <meta name="dcterms.date" content="2022-06-06">
 
-<title>Joseph Maier’s Blog - The 2010 San Deigo Chargers</title>
+<title>Joseph Maier’s Blog - The mind-boggling failure of the 2010 San Deigo Chargers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -179,7 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The 2010 San Deigo Chargers</h1>
+<h1 class="title">The mind-boggling failure of the 2010 San Deigo Chargers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">nfl</div>
     <div class="quarto-category">chargers</div>
@@ -211,8 +211,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>Chargers fans have grown accustomed to heart wrenching losses over the last 20 years. Their 2023 27-0 playoff choke against the Jaguars is just the latest in a long line of catastrophic failures. What’s worse is the complete waste of three hall-of-fame potential careers, Ladainian Tomlinson, Antonio Gates and Phillip Rivers. The three won just three playoff games together.</p>
-<p>The 2010 Chargers’ season perfectly embodies the aura of the team. That’t the year they had the best offense and best defense in the NFL, but managed to miss the playoffs with a 9-7 record. Yep, you heard that right. Best offense, best defense, no playoffs.</p>
+<p>Chargers fans have grown accustomed to heart wrenching losses over the last 20 years. Their 2023 27-0 playoff choke against the Jaguars is just the latest in a long line of catastrophic failures. What’s worse is the complete waste of three hall-of-fame potential careers, LaDainian Tomlinson, Antonio Gates and Phillip Rivers. The dynamic trio won just three playoff games together.</p>
+<p>The 2010 Chargers’ season perfectly embodies the aura of the team. That’s the year they had the best offense and best defense in the NFL, but managed to miss the playoffs with a 9-7 record. Yep, you heard that right. Best offense, best defense, no playoffs.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -288,6 +288,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>It’s almost laughable how much more productive the Chargers were than every playoff team. A few teams rank close to them on either offense or defense, but combined, the Chargers are in a league of their own.</p>
+<p>But yards don’t always translate into points. They could have marched down the field with ease but struggled to cash drives in for touchdowns. Surprisingly, the Chargers actually performed well on the scorebord too.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -319,36 +321,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffworstever, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"lightgrey"</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_step</span>(<span class="at">data=</span>diffchargers, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#1167b1"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffbrowns, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#FF3C00"</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>difflions, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#58CCED"</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffjaguars, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#006778"</span>) <span class="sc">+</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="dv">60</span>, <span class="at">label=</span> <span class="st">"2008 Lions"</span>, <span class="at">color=</span> <span class="st">"#58CCED"</span>) <span class="sc">+</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="fl">14.5</span>, <span class="at">y=</span><span class="dv">28</span>, <span class="at">label=</span> <span class="st">"2020 Jaguars"</span>, <span class="at">color=</span> <span class="st">"#006778"</span>) <span class="sc">+</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="sc">-</span><span class="dv">20</span>, <span class="at">label=</span> <span class="st">"2017 Browns"</span>, <span class="at">color=</span> <span class="st">"#FF3C00"</span>) <span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="sc">-</span><span class="dv">70</span>, <span class="at">label=</span> <span class="st">"2010 Chargers"</span>, <span class="at">color=</span> <span class="st">"#1167b1"</span>) <span class="sc">+</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Week"</span>, </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Cumulative Special Teams Expected Points Contributed"</span>, </span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"The 2010 Chargers had an all-time bad special teams unit"</span>, </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Compared to the 10 worst NFL teams since 1996, the Chargers had the most harmful special teams unit</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">by a large margin. Their special teams play lost them an expected 89 points throughout the season"</span>, </span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Joseph Maier"</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span> ,</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>() <span class="sc">+</span> </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>differential <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(PD))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 32 × 13
+   Tm           W     L `W-L%`    PF    PA    PD   MoV   SoS   SRS  OSRS  DSRS
+   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 Patriots    14     2  0.875   518   313   205  12.8   2.6  15.4  12.6   2.8
+ 2 Packers     10     6  0.625   388   240   148   9.3   1.7  10.9   3.1   7.9
+ 3 Steelers    12     4  0.75    375   232   143   8.9   1.3  10.2   2.5   7.7
+ 4 Falcons     13     3  0.813   414   288   126   7.9  -1.8   6.1   3.8   2.2
+ 5 Chargers     9     7  0.563   441   322   119   7.4  -2.6   4.8   3.2   1.6
+ 6 Ravens      12     4  0.75    357   270    87   5.4   1     6.4   0.9   5.5
+ 7 Saints      11     5  0.688   384   307    77   4.8  -2.5   2.3   1.5   0.8
+ 8 Jets        11     5  0.688   367   304    63   3.9   2.5   6.5   2.2   4.2
+ 9 Eagles      10     6  0.625   439   377    62   3.9   0.3   4.2   5.4  -1.2
+10 Bears       11     5  0.688   334   286    48   3     1.1   4.1  -0.6   4.7
+# ℹ 22 more rows
+# ℹ 1 more variable: Playoffs &lt;chr&gt;</code></pre>
+</div>
+</div>
+<p>Just by looking at their point differential throughout the season, the 2010 Chargers look like one of the best teams in the league. Most of the playoff teams fall below them on this chart. Of the teams that rank above the Chargers, three of them won at least 12 games. To make things even worse, the 2010 Seahawks, who went 7-9 with a -97 point differential, won their division and made the playoffs.</p>
+<p>A look at the game results from that season shows how the Chargers managed to do this. They started the season 2-5, with all five of their losses coming by one score or less. The Chargers also won five games by 21 points or more, boosting their overall point differential.</p>
+<p>So why did they lose all those games even with a great offense and defense? Special teams. The 2010 Chargers had one of the worst special teams units of all time. They allowed 3 kick return touchdowns and had four punts blocked, the only team in NFL history to allow those numbers in the same season. There were six games in 2010 in which the Chargers’ special teams contributed to 7 or more expected points for the other team.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffworstever, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"lightgrey"</span>) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_step</span>(<span class="at">data=</span>diffchargers, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#1167b1"</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffbrowns, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#FF3C00"</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>difflions, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#58CCED"</span>) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">data=</span>diffjaguars, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>ExpectedDiff, <span class="at">group=</span>Team), <span class="at">color =</span><span class="st">"#006778"</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="dv">60</span>, <span class="at">label=</span> <span class="st">"2008 Lions"</span>, <span class="at">color=</span> <span class="st">"#58CCED"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="fl">14.5</span>, <span class="at">y=</span><span class="dv">28</span>, <span class="at">label=</span> <span class="st">"2020 Jaguars"</span>, <span class="at">color=</span> <span class="st">"#006778"</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="sc">-</span><span class="dv">20</span>, <span class="at">label=</span> <span class="st">"2017 Browns"</span>, <span class="at">color=</span> <span class="st">"#FF3C00"</span>) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">16</span>, <span class="at">y=</span><span class="sc">-</span><span class="dv">70</span>, <span class="at">label=</span> <span class="st">"2010 Chargers"</span>, <span class="at">color=</span> <span class="st">"#1167b1"</span>) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Week"</span>, </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Cumulative Special Teams Expected Points Contributed"</span>, </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"The 2010 Chargers had an all-time bad special teams unit"</span>, </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Compared to the 10 worst NFL teams since 1996, the Chargers had the most harmful special teams unit</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">by a large margin. Their special teams play lost them an expected 89 points throughout the season"</span>, </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Joseph Maier"</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span>  <span class="fu">theme</span>(</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span> ,</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>() <span class="sc">+</span> </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>According to the expected points model, the Chargers’ special teams lost them 89 points throughout the year. Four of their losses can be explained soley by special teams miscues, as the expected points lost was more than the score differential.</p>
+<p>When compared with some of the worst teams of all time, the 2010 Chargers had the worst special teams unit of any of them. Their failures in the kicking and punting game wasted the best offense and best defense in the league. But what did we expect, its the Chargers.</p>
 
 
 
